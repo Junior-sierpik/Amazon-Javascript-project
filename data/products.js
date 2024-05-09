@@ -642,7 +642,7 @@ const products = [
     ]
   },
   {
-    id: "bc2847e9-5323-403f-b7cf-57fde044a955",
+    id: "c",
     image: "images/products/men-cozy-fleece-zip-up-hoodie-red.jpg",
     name: "Men's Full-Zip Hooded Fleece Sweatshirt",
     rating: {
@@ -655,6 +655,38 @@ const products = [
       "hoodies",
       "apparel",
       "mens"
+    ]
+  },
+  {
+    id: "bc2847e9-9462-985k-w3dh-66fde0434a235",
+    image: "images/products/backpack.jpg",
+    name: "Black Trecking Backpack",
+    rating: {
+      stars: 4.5,
+      count: 2123
+    },
+    priceCents: 34000,
+    keywords: [
+      "backpack",
+      "sport",
+      "mountains",
+      "trecking"
+    ]
+  },
+  {
+    id: "bc2847e9-0098-074b-l4pg-12fde0962a289",
+    image: "images/products/umbrella.jpg",
+    name: "EcoFriendly Umbrella",
+    rating: {
+      stars: 1.0,
+      count: 666
+    },
+    priceCents: 6999,
+    keywords: [
+      "umbrella",
+      "rain",
+      "weather",
+      "storm"
     ]
   }
 ];
