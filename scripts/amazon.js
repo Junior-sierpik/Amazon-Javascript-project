@@ -8,7 +8,18 @@ function renderProductsGrid() {
 
   let productsHTML = '';
 
-  products.forEach((product) => {
+  const url = new URL(window.location.href);
+  const search = url.searchParams.get('search');
+
+  let filteredProducts = products;
+
+  if (search) {
+    filteredProducts = products.filter((product) => {
+      return product.name.includes(search);
+    });
+  }
+
+  filteredProducts.forEach((product) => {
     productsHTML += `
     <div class="product-container">
     <div class="product-image-container">
@@ -88,6 +99,12 @@ function renderProductsGrid() {
       const {productId} = button.dataset;
       addToCart(productId);
       updateCartQuantity();
+
+      document.querySelector('.js-search-button')
+      .addEventListener('click', () => {
+        const search = document.querySelector('.js-search-bar').value;
+        window.location.href = `amazon.html?search=${search}`;
+    });
 
         const addedMessage = document.querySelector(`.js-added-to-cart-${productId}`);
         addedMessage.classList.add('added-to-cart-visible');
