@@ -115,6 +115,14 @@ function renderProductsGrid() {
         window.location.href = `amazon.html?search=${search}`;
     });
 
+      document.querySelector('.js-search-bar')
+      .addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          const searchTerm = document.querySelector('.js-search-bar').value;
+          window.location.href = `amazon.html?search=${searchTerm}`;
+        }
+      });
+
         const addedMessage = document.querySelector(`.js-added-to-cart-${productId}`);
         addedMessage.classList.add('added-to-cart-visible');
 
